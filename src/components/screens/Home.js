@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { StyleSheet, Text, View } from "react-native";
 import fetchBooks from "../../api";
-import Library from "../Library";
-import Books from "../Books";
-import { readFileSync } from "fs";
+
 
 const Home = () =>{
 
@@ -23,7 +21,6 @@ const Home = () =>{
 
     return <> 
     <Text>Books4All</Text>
-    
     </>
 };
 

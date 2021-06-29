@@ -1,5 +1,5 @@
 export const fetchBooks = async () =>{
-    const endpoint = "https://openlibrary.org/works/OL45883W";
+    const endpoint = "http://openlibrary.org/search.json?title=the+lord+of+the+rings";
 
     const response = await fetch(endpoint);
     const data = await response.json();

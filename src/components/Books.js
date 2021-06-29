@@ -5,7 +5,8 @@ const Books = ({bookInfo}) => {
     return (
         <View>
             <View>
-                <Text>{bookInfo.description}</Text>
+                <Text>{bookInfo.key}</Text>
+                <Text>{bookInfo.author_name}</Text>
         
             </View>
         </View>

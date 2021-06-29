@@ -1,11 +1,28 @@
-import React from "react";
-import { StyleSheet, View } from "react-native";
+import React, {useState} from "react";
+import { StyleSheet, Text, View } from "react-native";
+import fetchBooks from "../api";
 import Books from "./Books";
 
-const Library = ({books}) =>{
+const Library = () =>{
+    const [books, setBooks] = useState({});
+
+    //Hook
+
+    const getBooks = async () =>{
+        const response = await fetchBooks();
+
+        setBooks(response);
+    }
+
+
     return(
         <View>
-            <Books />
+            {Library.docs.map((bookInfo) =>{
+                return(
+                    <Books key={bookInfo.key} author_name={bookInfo.author_name}/>
+                )
+            })}
+            
         </View>
     )
 }
